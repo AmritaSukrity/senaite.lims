@@ -97,13 +97,15 @@ class BootstrapView(BrowserView):
            plone.rightcolumn.
         """
 
-        plone_view = getMultiAdapter(
-            (self.context, self.request), name=u'plone')
+        # plone_view = getMultiAdapter(
+        #     (self.context, self.request), name=u'plone')
+        plone_layout_view = getMultiAdapter(
+            (self.context, self.request), name=u'plone_layout')
         portal_state = getMultiAdapter(
             (self.context, self.request), name=u'plone_portal_state')
 
-        sl = plone_view.have_portlets('plone.leftcolumn', view=view)
-        sr = plone_view.have_portlets('plone.rightcolumn', view=view)
+        sl = plone_layout_view.have_portlets('plone.leftcolumn', view=view)
+        sr = plone_layout_view.have_portlets('plone.rightcolumn', view=view)
 
         isRTL = portal_state.is_rtl()
 
