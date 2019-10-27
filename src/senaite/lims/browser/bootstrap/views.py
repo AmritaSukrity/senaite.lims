@@ -19,8 +19,9 @@
 # Some rights reserved, see README and LICENSE.
 
 from bika.lims import api
-from plone.app.controlpanel.overview import OverviewControlPanel
 from plone.memoize.ram import cache
+from Products.CMFPlone.controlpanel.browser.overview import \
+    OverviewControlPanel
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from senaite.lims import logger

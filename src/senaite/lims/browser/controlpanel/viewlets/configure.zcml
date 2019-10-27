@@ -5,8 +5,6 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="senaite.lims">
 
-  <include package="plone.app.controlpanel" file="permissions.zcml" />
-
   <!-- Setup Button Viewlet -->
   <browser:viewlet
       name="senaite.setupbutton"

@@ -13,7 +13,7 @@
   <!-- Package Includes -->
   <include package=".browser"/>
   <include package=".upgrades"/>
-  <include package=".patches" />
+  <!-- <include package=".patches" /> -->
 
   <!-- Filesystem directory view -->
   <cmf:registerDirectory name="skins" directory="skins" recursive="True"/>

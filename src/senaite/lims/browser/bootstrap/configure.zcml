@@ -5,7 +5,7 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="senaite.lims">
 
-  <include package="plone.app.controlpanel" file="permissions.zcml" />
+  <include package="Products.CMFPlone.controlpanel" file="permissions.zcml" />
 
   <!-- SENAITE install screen -->
   <browser:page
@@ -101,12 +101,12 @@
   <include package="bika.lims" file="permissions.zcml" />
 
   <!-- Content views (tabs) -->
-  <browser:viewlet
-      name="plone.contentviews"
-      manager="plone.app.layout.viewlets.interfaces.IContentViews"
-      class=".viewlets.SenaiteContentViewsViewlet"
-      permission="zope2.View"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
+  <!-- <browser:viewlet -->
+  <!--     name="plone.contentviews" -->
+  <!--     manager="plone.app.layout.viewlets.interfaces.IContentViews" -->
+  <!--     class=".viewlets.SenaiteContentViewsViewlet" -->
+  <!--     permission="zope2.View" -->
+  <!--     layer="senaite.lims.interfaces.ISenaiteLIMS"/> -->
 
   <!-- Site Actions -->
   <browser:viewlet

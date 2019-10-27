@@ -18,7 +18,7 @@
 # Copyright 2018-2019 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
-from plone.app.controlpanel.filter import IFilterSchema
+from Products.CMFPlone.interfaces import IFilterSchema
 from senaite.lims import logger
 
 ALLOWED_STYLES = [
@@ -38,7 +38,7 @@ def setup_handler(context):
     portal = context.getSite()  # noqa
 
     # Custom setup handlers
-    setup_html_filter(portal)
+    # setup_html_filter(portal)
 
     logger.info("SENAITE setup handler [DONE]")
 
