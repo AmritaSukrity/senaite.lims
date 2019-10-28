@@ -89,11 +89,6 @@ class SenaitePathBarViewlet(PathBarViewlet):
         'templates/plone.app.layout.viewlets.path_bar.pt')
 
 
-class SenaitePersonalBarViewlet(PersonalBarViewlet):
-    index = ViewPageTemplateFile(
-        'templates/plone.app.layout.viewlets.personal_bar.pt')
-
-
 class SenaitePersonalNavBarViewlet(PersonalBarViewlet):
     index = ViewPageTemplateFile(
         'templates/senaite.lims.browser.bootstrap.viewlets.personal_nav_bar.pt')

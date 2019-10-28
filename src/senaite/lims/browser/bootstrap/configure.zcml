@@ -122,14 +122,6 @@
       permission="zope2.View"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
-  <!-- Personal bar -->
-  <browser:viewlet
-      name="plone.personal_bar"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".viewlets.SenaitePersonalBarViewlet"
-      permission="zope2.View"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
   <!-- SENAITE Personal Navigation Bar -->
   <browser:viewlet
       name="senaite.personal_nav_bar"
