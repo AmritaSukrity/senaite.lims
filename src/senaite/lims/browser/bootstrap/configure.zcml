@@ -54,14 +54,6 @@
       class="plone.app.viewletmanager.manager.OrderedViewletManager"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
-  <!-- Logo Viewlet -->
-  <browser:viewlet
-      name="plone.logo"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".viewlets.SenaiteLogoViewlet"
-      permission="zope2.View"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
   <!-- Language Selector -->
   <browser:viewlet
       name="plone.app.i18n.locales.languageselector"
