@@ -54,16 +54,6 @@
       class="plone.app.viewletmanager.manager.OrderedViewletManager"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
-  <!-- Content Menu -->
-  <!-- <adapter -->
-  <!--     name="plone.contentmenu" -->
-  <!--     for="* -->
-  <!--          senaite.lims.interfaces.ISenaiteLIMS -->
-  <!--          *" -->
-  <!--     factory=".adapters.SenaiteContentMenuProvider" -->
-  <!--     provides="zope.contentprovider.interfaces.IContentProvider" -->
-  <!--     /> -->
-
   <!-- Logo Viewlet -->
   <browser:viewlet
       name="plone.logo"

@@ -18,16 +18,9 @@
 # Copyright 2018-2019 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
-from plone.app.contentmenu.view import ContentMenuProvider
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ZPublisher.BaseRequest import DefaultPublishTraverse
 from zope.interface import Interface
 from zope.component import queryMultiAdapter
-
-
-class SenaiteContentMenuProvider(ContentMenuProvider):
-    index = ViewPageTemplateFile(
-        "templates/plone.app.contentmenu.contentmenu.pt")
 
 
 class SenaiteAppTraverser(DefaultPublishTraverse):
