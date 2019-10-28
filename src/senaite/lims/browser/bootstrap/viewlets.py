@@ -21,7 +21,6 @@
 from cgi import escape
 
 from Acquisition import aq_inner
-from bika.lims.browser.instrument import InstrumentQCFailuresViewlet
 from bika.lims.browser.viewlets.attachments import AttachmentsViewlet
 from bika.lims.browser.viewlets.attachments import WorksheetAttachmentsViewlet
 from plone.app.customerize import registration
@@ -127,11 +126,6 @@ class SenaiteColophonViewlet(ViewletBase):
 class SenaiteFooterViewlet(FooterViewlet):
     index = ViewPageTemplateFile(
         'templates/plone.app.layout.viewlets.footer.pt')
-
-
-class SenaiteInstrumentQCFailuresViewlet(InstrumentQCFailuresViewlet):
-    index = ViewPageTemplateFile(
-        'templates/bika.lims.browser.templates.instrument_qc_failures_viewlet.pt')
 
 
 class SenaiteAttachmentsViewlet(AttachmentsViewlet):
