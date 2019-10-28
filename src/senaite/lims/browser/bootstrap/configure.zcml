@@ -63,9 +63,6 @@
       permission="zope2.View"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
-  <!-- Needed for bika.lims.ManageBika permission -->
-  <include package="bika.lims" file="permissions.zcml" />
-
   <!-- Site Actions -->
   <browser:viewlet
       name="plone.site_actions"
