@@ -46,14 +46,6 @@
       permission="plone.app.controlpanel.Overview"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
-  <!-- Viewlet Manager -->
-  <browser:viewletManager
-      name="senaite.belownavbarsections"
-      provides=".interfaces.IBelowNavbarSections"
-      permission="zope2.View"
-      class="plone.app.viewletmanager.manager.OrderedViewletManager"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
   <!-- Language Selector -->
   <browser:viewlet
       name="plone.app.i18n.locales.languageselector"
@@ -61,14 +53,6 @@
       class="plone.app.i18n.locales.browser.selector.LanguageSelector"
       permission="zope2.View"
       template="templates/plone.app.i18n.locales.browser.languageselector.pt"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
-  <!-- Global sections -->
-  <browser:viewlet
-      name="plone.global_sections"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".viewlets.SenaiteGlobalSectionsViewlet"
-      permission="zope2.View"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 
   <!-- Sections Dropdown -->
@@ -81,14 +65,6 @@
 
   <!-- Needed for bika.lims.ManageBika permission -->
   <include package="bika.lims" file="permissions.zcml" />
-
-  <!-- Content views (tabs) -->
-  <!-- <browser:viewlet -->
-  <!--     name="plone.contentviews" -->
-  <!--     manager="plone.app.layout.viewlets.interfaces.IContentViews" -->
-  <!--     class=".viewlets.SenaiteContentViewsViewlet" -->
-  <!--     permission="zope2.View" -->
-  <!--     layer="senaite.lims.interfaces.ISenaiteLIMS"/> -->
 
   <!-- Site Actions -->
   <browser:viewlet
@@ -103,14 +79,6 @@
       name="plone.abovecontenttitle.documentactions"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
       class=".viewlets.SenaiteDocumentActionsViewlet"
-      permission="zope2.View"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
-  <!-- SENAITE Personal Navigation Bar -->
-  <browser:viewlet
-      name="senaite.personal_nav_bar"
-      manager=".interfaces.IBelowNavbarSections"
-      class=".viewlets.SenaitePersonalNavBarViewlet"
       permission="zope2.View"
       layer="senaite.lims.interfaces.ISenaiteLIMS"/>
 

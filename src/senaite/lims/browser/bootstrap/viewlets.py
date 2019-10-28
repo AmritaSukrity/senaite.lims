@@ -24,7 +24,6 @@ from Acquisition import aq_inner
 from plone.app.customerize import registration
 from plone.app.layout.viewlets.common import ContentViewsViewlet
 from plone.app.layout.viewlets.common import GlobalSectionsViewlet
-from plone.app.layout.viewlets.common import PersonalBarViewlet
 from plone.app.layout.viewlets.common import SiteActionsViewlet
 from plone.app.layout.viewlets.content import DocumentActionsViewlet
 from Products.CMFPlone.utils import safe_unicode
@@ -34,19 +33,6 @@ from zExceptions import NotFound
 from zope.component import getMultiAdapter
 from zope.publisher.interfaces.browser import IBrowserRequest
 from zope.viewlet.interfaces import IViewlet
-
-
-class SenaiteGlobalSectionsViewlet(GlobalSectionsViewlet):
-    index = ViewPageTemplateFile(
-        'templates/plone.app.layout.viewlets.sections.pt')
-
-    def update(self):
-        super(SenaiteGlobalSectionsViewlet, self).update()
-        portal_state = getMultiAdapter((self.context, self.request),
-                                       name=u'plone_portal_state')
-        self.navigation_root_url = portal_state.navigation_root_url()
-        self.portal_title = escape(
-            safe_unicode(portal_state.navigation_root_title()))
 
 
 class SenaiteSectionsDropdownViewlet(GlobalSectionsViewlet):
@@ -60,12 +46,6 @@ class SenaiteSectionsDropdownViewlet(GlobalSectionsViewlet):
         self.navigation_root_url = portal_state.navigation_root_url()
         self.portal_title = escape(
             safe_unicode(portal_state.navigation_root_title()))
-
-
-class SenaitePersonalNavBarViewlet(PersonalBarViewlet):
-    index = ViewPageTemplateFile(
-        'templates/senaite.lims.browser.bootstrap.viewlets.personal_nav_bar.pt')
-
 
 class SenaiteContentViewsViewlet(ContentViewsViewlet):
     index = ViewPageTemplateFile(
