@@ -24,7 +24,6 @@ from Acquisition import aq_inner
 from plone.app.customerize import registration
 from plone.app.layout.viewlets.common import ContentViewsViewlet
 from plone.app.layout.viewlets.common import GlobalSectionsViewlet
-from plone.app.layout.viewlets.common import PathBarViewlet
 from plone.app.layout.viewlets.common import PersonalBarViewlet
 from plone.app.layout.viewlets.common import SiteActionsViewlet
 from plone.app.layout.viewlets.content import DocumentActionsViewlet
@@ -61,11 +60,6 @@ class SenaiteSectionsDropdownViewlet(GlobalSectionsViewlet):
         self.navigation_root_url = portal_state.navigation_root_url()
         self.portal_title = escape(
             safe_unicode(portal_state.navigation_root_title()))
-
-
-class SenaitePathBarViewlet(PathBarViewlet):
-    index = ViewPageTemplateFile(
-        'templates/plone.app.layout.viewlets.path_bar.pt')
 
 
 class SenaitePersonalNavBarViewlet(PersonalBarViewlet):
