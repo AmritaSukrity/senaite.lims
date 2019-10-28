@@ -23,13 +23,11 @@ from cgi import escape
 from Acquisition import aq_inner
 from plone.app.customerize import registration
 from plone.app.layout.viewlets.common import ContentViewsViewlet
-from plone.app.layout.viewlets.common import FooterViewlet
 from plone.app.layout.viewlets.common import GlobalSectionsViewlet
 from plone.app.layout.viewlets.common import LogoViewlet
 from plone.app.layout.viewlets.common import PathBarViewlet
 from plone.app.layout.viewlets.common import PersonalBarViewlet
 from plone.app.layout.viewlets.common import SiteActionsViewlet
-from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets.content import DocumentActionsViewlet
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser import BrowserView
@@ -114,16 +112,6 @@ class SenaiteSiteActionsViewlet(SiteActionsViewlet):
 class SenaiteDocumentActionsViewlet(DocumentActionsViewlet):
     index = ViewPageTemplateFile(
         'templates/plone.app.layout.viewlets.documentactions.pt')
-
-
-class SenaiteColophonViewlet(ViewletBase):
-    index = ViewPageTemplateFile(
-        'templates/plone.app.layout.viewlets.colophon.pt')
-
-
-class SenaiteFooterViewlet(FooterViewlet):
-    index = ViewPageTemplateFile(
-        'templates/plone.app.layout.viewlets.footer.pt')
 
 
 class ViewletView(BrowserView):
