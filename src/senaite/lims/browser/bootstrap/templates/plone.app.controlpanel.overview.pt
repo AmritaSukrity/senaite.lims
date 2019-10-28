@@ -21,7 +21,7 @@
         Configuration area for Plone and add-on Products.
     </p>
 
-    <div class="portalMessage warning"
+    <div class="portalMessage alert alert-warning"
          role="status"
          tal:condition="view/upgrade_warning">
         <strong i18n:translate="">
@@ -41,7 +41,7 @@
         </span>
     </div>
 
-    <div class="portalMessage warning"
+    <div class="portalMessage alert alert-warning"
          role="status"
          tal:condition="view/mailhost_warning">
         <strong i18n:translate="">
@@ -61,7 +61,7 @@
         </span>
     </div>
 
-    <div class="portalMessage warning"
+    <div class="portalMessage alert alert-warning"
          role="status"
          tal:condition="view/timezone_warning">
         <strong i18n:translate="">
@@ -82,7 +82,7 @@
         </span>
     </div>
 
-    <div class="portalMessage warning"
+    <div class="portalMessage alert alert-warning"
          role="status"
          tal:condition="not:view/pil">
         <strong i18n:translate="">
