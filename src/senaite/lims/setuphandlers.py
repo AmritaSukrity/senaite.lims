@@ -26,7 +26,6 @@ ALLOWED_STYLES = [
     "background-color"
 ]
 
-
 def setup_handler(context):
     """Generic setup handler
     """
