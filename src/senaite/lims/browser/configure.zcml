@@ -5,7 +5,6 @@
 
   <!-- Package Includes -->
   <include package=".bootstrap"/>
-  <include package=".controlpanel"/>
   <include package=".backbone"/>
   <include package=".spotlight"/>
   <include package=".overwrites"/>
