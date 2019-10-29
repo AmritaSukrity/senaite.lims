@@ -36,3 +36,16 @@ def to_1000(portal_setup):
     setup_html_filter(portal)
     portal_setup.runAllImportStepsFromProfile(PROFILE_ID)
     logger.info("Run all import steps from SENAITE LIMS [DONE]")
+
+
+def to_2000(portal_setup):
+    """Initial version to 1000
+
+    :param portal_setup: The portal_setup tool
+    """
+
+    logger.info("Run all import steps from SENAITE LIMS ...")
+    context = portal_setup._getImportContext(PROFILE_ID)
+    portal = context.getSite()
+    portal_setup.runAllImportStepsFromProfile(PROFILE_ID)
+    logger.info("Run all import steps from SENAITE LIMS [DONE]")

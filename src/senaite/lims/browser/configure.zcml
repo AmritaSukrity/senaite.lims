@@ -9,10 +9,4 @@
   <include package=".spotlight"/>
   <include package=".overwrites"/>
 
-  <!-- Register static directory for image files -->
-  <browser:resourceDirectory
-      name="senaite.lims.images"
-      directory="images"
-      layer="senaite.lims.interfaces.ISenaiteLIMS"/>
-
 </configure>
